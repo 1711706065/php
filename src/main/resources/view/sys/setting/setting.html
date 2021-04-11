@@ -71,6 +71,17 @@
                         </div>
                     </div>
                     <div class="layui-form-item  layui-form-text">
+                        <label class="layui-form-label">系统名称颜色</label>
+                        <div class="layui-input-block">
+                            <div class="layui-input-inline" style="width: 170px;">
+                                <input type="text" value="" placeholder="请选择颜色" class="layui-input"  th:value="${sys.sysFontColor}" name="sysFontColor" id="sysFontColor">
+                            </div>
+                            <div class="layui-inline" style="left: -11px;">
+                                <div id="test-form-sysFontColor"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item  layui-form-text">
                         <label class="layui-form-label">用户管理：初始、重置密码</label>
                         <div class="layui-input-block">
                             <input type="text" name="userInitPassword" th:value="${sys.userInitPassword}" autocomplete="off"

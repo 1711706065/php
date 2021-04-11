@@ -19,6 +19,22 @@ layui.use(['colorpicker','form'], function () {
         }
     });
 
+    //开启全功能
+    colorpicker.render({
+        elem: '#test-form-sysColor'
+        ,color: $('#sysColor').val()
+        ,format: 'rgb'
+        ,predefine: true
+        ,alpha: true
+        ,done: function(color){
+            $('#sysColor').val(color);
+        }
+        ,change: function(color){
+            //给当前页面头部和左侧设置主题色
+            $('#system-name').css('color', color);
+        }
+    });
+
     //建立编辑器
     sysNoticeTextEdit = UE.getEditor('sysNoticeTextEdit');
     //回显

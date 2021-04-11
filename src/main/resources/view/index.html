@@ -13,7 +13,9 @@
     <div class="layui-layout layui-layout-admin">
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <div class="layui-header system-background-color" th:style="${' background-color:' + sys.sysColor}">
-            <div class="layui-logo"><img th:src='${sys.sysLogo}' id="system-logo" class="layui-nav-img"/> <span id="system-name" th:text="${sys.sysName}"></span></div>
+            <div class="layui-logo"><img th:src='${sys.sysLogo}' id="system-logo" class="layui-nav-img"/>
+                <span id="system-name" th:text="${sys.sysName}"></span>
+            </div>
             <ul class="layui-nav layui-layout-left">
                 <!-- 动态读取加载用户快捷菜单 -->
                 <li class="layui-nav-item" th:each="menu,iterStat : ${shortcutMenuList}" th:unless="${#lists.size(menu.children)} eq 0">

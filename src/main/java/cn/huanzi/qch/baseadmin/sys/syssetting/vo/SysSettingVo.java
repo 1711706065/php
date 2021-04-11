@@ -16,6 +16,8 @@ public class SysSettingVo extends PageCondition implements Serializable {
 
     private String sysColor;//系统颜色
 
+    private String sysFontColor;//系统文字颜色
+
     private String sysNoticeText;//系统公告
 
     private String sysApiEncrypt;//API加密 Y/N
